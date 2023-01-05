@@ -1,1 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Planner App</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="App.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <img id="logo" src=".\logo.png">
+            <div class="nav-section">
+                <p>Home</p>
+                <p>About</p>
+                <p>Contact</p>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <diV class="container">
+        </diV>
+        <div id="error"></div>
+        <form onsubmit="return false" method="GET" id="meal_planner_form">
+            <div>
+                <label for="weight">Weight (kg)</label>
+                <input id="weight" name="weight" type="number" placeholder="Enter your weight" required>
+            </div>
+            <div>
+                <label for="height">Height (cm)</label>
+                <input id="height" type="number" name="height" placeholder="Enter your height" required>
+            </div>
+            <div>
+                <label for="age">Age</label>
+                <input type="text" id="age" name="age" required>
+            </div>
+            <div>
+                <label for="gender">Gender</label>
+                <select class="gender" value="select" required>
+                    <option disabled hidden selected>Select</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+                <div>
+                    <label>Physical Activity</label>
+                    <select id="physical-activity">
+                        <option disabled hidden selected>Select</option>
+                        <option value="light">Lightly Active</option>
+                        <option value="moderate">Moderately Active</option>
+                        <option value="active">Active</option>
+                    </select>
+
+
+                </div>
+                <button id="submit" type="submit" value="Submit">Submit</button>
+
+            </div>
+
+        </form>
+        </div>
+
+        <div id="card">
+        </div>
+        <div id="recipe-container">
+            <ol id="ingredients"></ol>
+            <div id="steps"></div>
+        </div>
+
+        </div>
+
+
+    </main>
+    <footer>
+
+    </footer>
+
+</body>
+
+</html>
