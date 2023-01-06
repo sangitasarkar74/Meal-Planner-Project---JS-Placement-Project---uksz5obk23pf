@@ -177,6 +177,6 @@ async function ingredients(id) {
     return data.analyzedInstructions;
 }
 
-var recipeItem = document.getElementById("equipments");
-var equipmentHeading = document.createElement("h2");
-equipmentHeading.textContent = "Equipments";
+// var recipeItem = document.getElementById("equipments");
+// var equipmentHeading = document.createElement("h2");
+// equipmentHeading.textContent = "Equipments";
