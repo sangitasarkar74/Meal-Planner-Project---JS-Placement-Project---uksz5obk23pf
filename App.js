@@ -1,5 +1,4 @@
 
-
 var submit = document.getElementById("submit");
 var weight = document.getElementById("weight");
 var height = document.getElementById("height");
@@ -11,7 +10,7 @@ var physicalActivity = document.getElementById("physical-activity");
 var activityIndex = physicalActivity.selectedIndex;
 
 submit.addEventListener("click", calorieCalculator);
-
+const submitBtn = document.getElementById('submit');
 
 function calorieCalculator() {
     var genDerIndex = gender.selectedIndex;
@@ -61,6 +60,11 @@ function calorieCalculator() {
         }
     }
     fetchAPI(calorie_requirement);
+
+
+    const element = document.getElementById("card-container");
+    element.scrollIntoView({ behavior: 'smooth' });
+
 }
 
 function fetchAPI(targetCalories) {
@@ -82,49 +86,12 @@ function fetchAPI(targetCalories) {
                     <div class="card-title">
                         <img src="${imageUrl}" alt="${meal.title}">   
                         <h1>${meal.title}</h1>                        
-                        <button id="get-recipe">Get recipe</button>            
+                        <button id="get-recipe" onclick="getRecipeDetails(${meal.id});">Get recipe</button>
+                        
                     </div>                   
                 </div> `
                     document.getElementById("card").innerHTML = myData;
 
-                    const button = document.getElementById('get-recipe');
-                    button.addEventListener('click', function () {
-
-                        let idData = "";
-                        let stepsData = "";
-                        ingredients(meal.id).then((data) => {
-                            console.log(data);
-                            data.map((result) => {
-                                console.log(result.steps);
-                                result.steps.map((step) => {
-                                    console.log(step);
-                                    stepsData += `                                                        
-                                  <p>  ${step.step} <p>
-                                    `
-                                    let heading = document.createElement("h1");
-                                    heading.innerHTML = "STEPS";
-                                    document.body.appendChild(heading);
-                                    document.getElementById('steps').innerHTML = stepsData;
-
-
-                                    step.ingredients.map((ingredients) => {
-                                        console.log(ingredients);
-                                        idData = `
-                                        ${ingredients.name}                                        
-                                        `
-                                        // document.getElementById('ingredients').innerHTML = idData;
-                                        const ol = document.getElementById('ingredients');
-                                        const li = document.createElement('li');
-                                        li.textContent = idData;
-                                        ol.append(li);
-                                    })
-
-
-                                })
-
-                            })
-                        });
-                    });
                 });
             })
         })
@@ -132,6 +99,69 @@ function fetchAPI(targetCalories) {
             console.log(error);
         })
 }
+
+
+function getRecipeDetails(id) {
+    const element = document.getElementById("recipe-container");
+    element.scrollIntoView({ behavior: 'smooth' });
+
+    console.log("hello");
+    document.getElementById('ingredients').innerHTML = "";
+    document.getElementById('equipments').innerHTML = "";
+    document.getElementById('steps').innerHTML = "";
+
+    ingredients(id).then((data) => {
+        console.log(data);
+        data.map((result) => {
+            console.log(result.steps);
+            let stepsData = "";
+            result.steps.map((step) => {
+                console.log(step);
+                stepsData += `                                                        
+                <p>  ${step.step} <p>
+                 `
+
+
+                document.getElementById('steps').innerHTML = stepsData;
+                // stepsItem.append(stepsData);
+
+                step.equipment.map((equip) => {
+                    console.log(equip)
+                    let equipdata = "";
+                    equipdata = `
+                    ${equip.name}                                        
+                     `
+                    // document.getElementById('ingredients').innerHTML = idData;
+
+
+                    const ol = document.getElementById('equipments');
+                    const li = document.createElement('li');
+                    li.textContent = equipdata;
+                    ol.append(li);
+                });
+
+
+
+                step.ingredients.map((ingredient) => {
+                    console.log(ingredient);
+                    let idData = "";
+                    idData = `
+                           ${ingredient.name}                                        
+                             `
+                    // document.getElementById('ingredients').innerHTML = idData;
+
+                    const ul = document.getElementById('ingredients');
+                    const li = document.createElement('li');
+                    li.textContent = idData;
+                    ul.append(li);
+                });
+            });
+        });
+    });
+}
+
+
+
 async function getRecipeInformation(id) {
     const data = await
         fetch(`https://api.spoonacular.com/recipes/${id}/information?apiKey=3db6164444164e758952c9fecd02a1ea`)
@@ -147,5 +177,6 @@ async function ingredients(id) {
     return data.analyzedInstructions;
 }
 
-
-
+var recipeItem = document.getElementById("equipments");
+var equipmentHeading = document.createElement("h2");
+equipmentHeading.textContent = "Equipments";

@@ -12,7 +12,7 @@ body {
 }
 
 #logo {
-    width: 40px;
+    width: 70px;
     line-height: 10%;
     text-align: center;
     vertical-align: middle;
@@ -26,6 +26,7 @@ nav {
     font-size: 20px;
     background-color: rgb(247, 244, 244);
     align-items: center;
+    height: 100px;
 }
 
 .nav-section {
@@ -34,11 +35,30 @@ nav {
     width: 50%;
 }
 
+.container {
+    width: 40%;
+    background-color: rgb(237, 237, 243);
+    margin: auto;
+    height: 500px;
+    border-radius: 5px;
+    border: 2px solid black;
+    margin-bottom: 20px;
+}
+
+#meal-planner {
+
+    margin: 20px;
+    padding: 20px;
+    margin-top: 30px;
+    text-align: center;
+}
+
 form {
     color: rgb(14, 1, 1);
     text-align: center;
     margin-top: 10%;
-    margin: 50px;
+    margin: 10px;
+    margin-bottom: 20px;
     font-size: 20px;
     font-family: sans-serif;
 }
@@ -47,6 +67,8 @@ input {
     margin: 10px;
     text-align: center;
     height: 30px;
+    font-size: 20px;
+    width: 50%;
 }
 
 #submit {
@@ -57,8 +79,11 @@ input {
     background-color: grey;
     box-shadow: 4px;
     font-size: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 
 }
+
 
 #submit:hover {
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
@@ -81,7 +106,7 @@ input {
     text-align: center;
     width: 90%;
     height: 700px;
-    background-color: rgb(80, 60, 60);
+    background-color: rgb(22, 1, 1);
     margin: auto;
     padding-top: 50px;
 }
@@ -89,13 +114,13 @@ input {
 .card-item {
     color: black;
     height: 600px;
-    background-color: bisque;
-    width: 380px;
+    background-color: rgb(231, 195, 154);
+    width: 300px;
 }
 
 .card-body {
     width: 300PX;
-    background-color: rgb(153, 30, 30);
+    background-color: rgb(218, 12, 12);
     margin: auto;
     height: 60%;
     margin-top: 20px;
@@ -110,8 +135,8 @@ h1 {
 }
 
 #get-recipe {
-    margin: 20px;
-    /* padding: 10px; */
+    margin: 10px;
+    margin-top: 5px;
     width: 150px;
     height: 30px;
     background-color: black;
@@ -123,6 +148,7 @@ h1 {
 
 #get-recipe:hover {
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+
 }
 
 #card img {
@@ -135,11 +161,30 @@ h1 {
 #ingredients {
     font-size: 20px;
     font-family: sans-serif;
-    padding-left: 100px;
+    padding-left: 10%;
     padding-top: 50px;
     padding-bottom: 50px;
-    background-color: black;
-    color: beige;
+    background-color: rgb(236, 230, 230);
+    color: rgb(17, 17, 16);
+    width: 50%;
+    border: soild whitesmoke;
+
+}
+
+#card-container {
+
+    display: flex;
+    justify-content: space-evenly;
+    height: 100px;
+    background-color: brown;
+    width: 90%;
+    margin: auto;
+    color: aliceblue;
+}
+
+#card-container h1 {
+
+    line-height: 0px;
 
 }
 
@@ -150,9 +195,90 @@ h1 {
 }
 
 #steps {
-    background-color: rgb(39, 2, 2);
+    background-color: rgb(240, 231, 231);
     font-size: 20px;
-    color: aliceblue;
-    padding: 50px;
+    color: rgb(11, 12, 12);
+    padding: 30px;
     font-family: sans-serif;
+    border: soild whitesmoke;
+    text-align: center;
+}
+
+#recipe {
+    display: flex;
+}
+
+#equipments {
+    font-size: 20px;
+    font-family: sans-serif;
+    padding-left: 15%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: rgb(238, 228, 228);
+    border: soild whitesmoke;
+    color: rgb(15, 15, 13);
+    width: 50%;
+
+}
+
+#ingred {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 8%;
+    padding-right: 20%;
+    padding-top: 20px;
+}
+
+#steps-container {
+    text-align: center;
+}
+
+.card-title h1 {
+    padding: 40px;
+}
+
+button:hover {
+    background-color: #3e8e41
+}
+
+button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+@media only screen and (max-width:900px) {
+
+    #meal-planner {
+        font-size: 20px;
+    }
+
+    form {
+
+        margin-top: 0%;
+        margin: 0px;
+        font-size: 10px;
+
+    }
+
+    #card img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .card-item {
+        width: 200px;
+    }
+
+    .card-title h1 {
+        font-size: 20px;
+    }
+
+    #card-container h1 {
+        font-size: 20px;
+
+    }
+
+
+
 }

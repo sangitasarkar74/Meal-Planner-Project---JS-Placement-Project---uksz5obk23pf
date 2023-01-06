@@ -23,54 +23,68 @@
     </header>
     <main>
         <diV class="container">
-        </diV>
-        <div id="error"></div>
-        <form onsubmit="return false" method="GET" id="meal_planner_form">
-            <div>
-                <label for="weight">Weight (kg)</label>
-                <input id="weight" name="weight" type="number" placeholder="Enter your weight" required>
-            </div>
-            <div>
-                <label for="height">Height (cm)</label>
-                <input id="height" type="number" name="height" placeholder="Enter your height" required>
-            </div>
-            <div>
-                <label for="age">Age</label>
-                <input type="text" id="age" name="age" required>
-            </div>
-            <div>
-                <label for="gender">Gender</label>
-                <select class="gender" value="select" required>
-                    <option disabled hidden selected>Select</option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                </select>
+            <h1 id="meal-planner">Daily Meal Planner</h1>
+
+            <div id="error"></div>
+            <form onsubmit="return false" method="GET" id="meal_planner_form">
+                <div>
+                    <label for="weight">Weight (kg)</label>
+                    <input id="weight" name="weight" type="number" placeholder="Enter your weight" required>
+                </div>
+                <div>
+                    <label for="height">Height (cm)</label>
+                    <input id="height" type="number" name="height" placeholder="Enter your height" required>
+                </div>
+                <div>
+                    <label for="age">Age</label>
+                    <input type="text" id="age" name="age" required placeholder="Enter your age">
+                </div>
+                <div>
+                    <label for="gender">Gender</label>
+                    <select class="gender" value="select" required>
+                        <option disabled hidden selected>Select</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
                 <div>
                     <label>Physical Activity</label>
-                    <select id="physical-activity">
+                    <select id="physical-activity" required>
                         <option disabled hidden selected>Select</option>
                         <option value="light">Lightly Active</option>
                         <option value="moderate">Moderately Active</option>
                         <option value="active">Active</option>
                     </select>
-
-
                 </div>
                 <button id="submit" type="submit" value="Submit">Submit</button>
-
-            </div>
+        </div>
 
         </form>
         </div>
-
+        <div id="card-container">
+            <h1>Breakfast</h1>
+            <h1>Lunch</h1>
+            <h1>Dinner</h1>
+        </div>
         <div id="card">
         </div>
         <div id="recipe-container">
-            <ol id="ingredients"></ol>
+            <div id="ingred">
+                <h2>Ingredients</h2>
+                <h2>Equipments</h2>
+            </div>
+            <div id="recipe">
+                <ol id="ingredients">
+                </ol>
+                <div id="equipments"></div>
+            </div>
+            <div id="steps-container">
+                <h2>Steps</h2>
+            </div>
             <div id="steps"></div>
         </div>
 
-        </div>
+
 
 
     </main>
