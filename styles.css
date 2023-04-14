@@ -298,10 +298,12 @@ button:active {
 
     .card-title h1 {
         font-size: 20px;
+        padding:10px;
     }
 
     #card-container h1 {
         font-size: 20px;
+        
 
     }
     #weight{
@@ -335,6 +337,9 @@ button:active {
 
 #card{
     width:100vw;
+}
+#get-recipe{
+    width: 80px;
 }
 
 }
