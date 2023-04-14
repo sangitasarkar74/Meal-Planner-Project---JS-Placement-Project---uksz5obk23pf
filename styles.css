@@ -4,6 +4,9 @@
     box-sizing: border-box;
 
 }
+main{
+   background-color: rgb(107, 121, 116);
+}
 
 body {
     margin: 0px;
@@ -25,7 +28,7 @@ nav {
     justify-content: space-between;
     color: rgb(1, 8, 8);
     font-size: 20px;
-    background-color: rgb(247, 244, 244);
+    background-color: rgb(51, 7, 7);
     align-items: center;
     height: 100px;
 }
@@ -47,6 +50,7 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    
 }
 
 #meal-planner {
@@ -200,10 +204,10 @@ h1 {
     display: flex;
     justify-content: space-evenly;
     height: 100px;
-    background-color: brown;
+    background-color: rgb(222, 228, 238);
     /* width: 90%; */
     margin: auto;
-    color: aliceblue;
+    color: rgb(1, 12, 22);
     padding-top:40px;
     font-size: 30px;
 }
