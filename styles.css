@@ -201,7 +201,7 @@ h1 {
     justify-content: space-evenly;
     height: 100px;
     background-color: brown;
-    width: 90%;
+    /* width: 90%; */
     margin: auto;
     color: aliceblue;
     padding-top:40px;
@@ -329,6 +329,8 @@ button:active {
 }
 #card-container{
     font-size: 15px;
+    width:100vw;
+
 }
 
 #card{
