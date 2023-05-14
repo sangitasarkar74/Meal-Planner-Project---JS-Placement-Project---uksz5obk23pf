@@ -11,43 +11,49 @@
 </head>
 
 <body>
-    <header>
-        <nav>
+    <header>        
+
             <img id="logo" src=".\logo.png">
-            <div class="nav-section">
-                <!-- <p>Home</p>
+            <!-- <div class="nav-section">
+                <p>Home</p>
                 <p>About</p>
-                <p>Contact</p> -->
-            </div>
-        </nav>
+                <p>Contact</p>
+            </div> -->
+        
+        <h1 id="meal-planner">Daily Meal Planner</h1>
+
     </header>
     <main>
-        <diV class="container">
-            <h1 id="meal-planner">Daily Meal Planner</h1>
+        <div class="image-container">
 
-            <div id="error"></div>
-            <form onsubmit="return false" method="GET" id="meal_planner_form">
-                <div>
+            <img class="diet-food"src="new-food-image.jpg" alt="food image">
+            
+            
+            <diV class="container">
+                <div id="meal-planner-form">           
+                <div id="error"></div>
+                <form onsubmit="return false" method="GET" id="meal_planner_form">
+                    <div>
                     <label for="weight">Weight (kg)</label>
                     <input id="weight" name="weight" type="number" placeholder="Enter your weight" required>
-                </div>
-                <div>
+                    </div>
+                    <div>
                     <label for="height">Height (cm)</label>
                     <input id="height" type="number" name="height" placeholder="Enter your height" required>
-                </div>
-                <div>
+                    </div>
+                    <div>
                     <label for="age">Age</label>
                     <input type="text" id="age" name="age" required placeholder="Enter your age">
-                </div>
-                <div>
+                    </div>
+                    <div >
                     <label for="gender">Gender</label>
                     <select class="gender" value="select" required>
                         <option disabled hidden selected>Select</option>
                         <option value="male">Male</option>
                         <option value="female">Female</option>
                     </select>
-                </div>
-                <div>
+                    </div>
+                    <div>
                     <label>Physical Activity</label>
                     <select id="physical-activity" required>
                         <option disabled hidden selected>Select</option>
@@ -55,12 +61,14 @@
                         <option value="moderate">Moderately Active</option>
                         <option value="active">Active</option>
                     </select>
+                    </div>
+                    <button id="submit" type="submit" value="Submit">Submit</button>
+                    </div>
                 </div>
-                <button id="submit" type="submit" value="Submit">Submit</button>
-        </div>
-
         </form>
         </div>
+    </div> 
+        
         <div id="card-container">
             <p>Breakfast</p>
             <p>Lunch</p>
