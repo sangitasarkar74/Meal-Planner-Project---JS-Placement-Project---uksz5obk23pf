@@ -1,8 +1,24 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 
+}
+.material-symbols-outlined{
+    position: fixed;
+    right:10px;
+    bottom:10px;
+    width:30px;
+    height: 30px;
+    background: rgb(116, 110, 110);
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    border: none;
+    box-shadow: 2px 5px 10px grey; 
+    text-align: center;  
 }
 
 
