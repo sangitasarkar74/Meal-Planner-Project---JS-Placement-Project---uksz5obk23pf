@@ -85,7 +85,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0px 5px 6px rgb(211, 207, 207);
+    box-shadow: 0px 3px 6px rgb(211, 207, 207);
 }
 
 form {
@@ -221,6 +221,7 @@ h1 {
     color: blanchedalmond;
     width: 50%;
     border: soild whitesmoke;
+    text-align: center;
 
 }
 
@@ -378,8 +379,10 @@ padding-left: 35%;
 }
 #ingred {
     flex-direction: column;
- text-align: center; 
-
+ align-items: center;
+}
+#ingredients h3{
+    width: 100px;
 }
 .material-symbols-outlined{
     position: fixed;
@@ -407,6 +410,13 @@ padding-left: 35%;
 .diet-food{
     width:100vw;
     height:200px;
+}
+#logo {
+    width:20%;
+    line-height: 20%;
+    text-align: center;
+    vertical-align: middle;
+    margin-left: 3%;
 }
 
 

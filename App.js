@@ -86,13 +86,13 @@ function calorieCalculator() {
   }
   fetchAPI(calorie_requirement);
 
-  const element = document.getElementById("card-container");
+  const element = document.getElementById("card");
   element.scrollIntoView({ behavior: "smooth" });
 }
 
 function fetchAPI(targetCalories) {
   fetch(
-    `https://api.spoonacular.com/mealplanner/generate?timeFrame=day&targetCalories=${targetCalories}&apiKey=3db6164444164e758952c9fecd02a1ea`
+    `https://api.spoonacular.com/mealplanner/generate?timeFrame=day&targetCalories=${targetCalories}&apiKey=4a7ecee83efc4e8b8ddc8099686fe7d9`
   )
     .then((data) => {
       return data.json();
@@ -137,10 +137,11 @@ function getRecipeDetails(id) {
     console.log(data);
     data.map((result) => {
       console.log(result.steps);
-      let stepsData = "";
+      let stepsData = "<h3>Steps</h3>";
       result.steps.map((step) => {
         console.log(step);
-        stepsData += `                                                        
+        stepsData += `  
+                                                       
                 <p>  ${step.step} <p>               `;
 
         document.getElementById("steps").innerHTML = stepsData;
@@ -148,14 +149,18 @@ function getRecipeDetails(id) {
         step.equipment.map((equip) => {
           console.log(equip);
           let equipdata = "";
-          equipdata = `
+          equipdata += `
+          
                     ${equip.name}                                        
                      `;
-          // document.getElementById('ingredients').innerHTML = idData;
+          // document.getElementById("equipments").innerHTML = idData;
 
           const ol = document.getElementById("equipments");
+          document.getElementById(
+            "equipments"
+          ).innerHTML = `<h3>Equipments</h3>`;
           const li = document.createElement("li");
-          li.textContent = equipdata;
+          li.innerHTML = equipdata;
           ol.append(li);
         });
 
@@ -168,8 +173,12 @@ function getRecipeDetails(id) {
           // document.getElementById('ingredients').innerHTML = idData;
 
           const ul = document.getElementById("ingredients");
+          document.getElementById(
+            "ingredients"
+          ).innerHTML = `<h3>Ingredients</h3>`;
+
           const li = document.createElement("li");
-          li.textContent = idData;
+          li.innerHTML = idData;
           ul.append(li);
         });
       });
@@ -179,7 +188,7 @@ function getRecipeDetails(id) {
 
 async function getRecipeInformation(id) {
   const data = await fetch(
-    `https://api.spoonacular.com/recipes/${id}/information?apiKey=3db6164444164e758952c9fecd02a1ea`
+    `https://api.spoonacular.com/recipes/${id}/information?apiKey=4a7ecee83efc4e8b8ddc8099686fe7d9`
   );
   const res = await data.json();
   console.log(res);
@@ -187,7 +196,7 @@ async function getRecipeInformation(id) {
 }
 async function ingredients(id) {
   const result = await fetch(
-    `https://api.spoonacular.com/recipes/${id}/information?apiKey=3db6164444164e758952c9fecd02a1ea`
+    `https://api.spoonacular.com/recipes/${id}/information?apiKey=4a7ecee83efc4e8b8ddc8099686fe7d9`
   );
   const data = await result.json();
   // console.log(res);
