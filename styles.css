@@ -267,7 +267,7 @@ color: blanchedalmond;
 #equipments {
     font-size: 20px;
     font-family: sans-serif;
-    padding-left: 30%;
+    padding-left: 50%;
     padding-top: 50px;
     padding-bottom: 50px;
     background-color: rgb(238, 228, 228);
@@ -311,7 +311,16 @@ button:active {
 form div{
 text-align:left;
 padding-left: 35%;
+}
+#ingredients h2{
+    padding-bottom: 20px;
 
+}
+#equipments h2{
+    padding-bottom: 20px;
+}
+#steps h2{
+    padding-bottom: 20px;
 }
 
 
@@ -381,9 +390,10 @@ padding-left: 35%;
     flex-direction: column;
  align-items: center;
 }
-#ingredients h3{
+#ingredients h2{
     width: 100px;
 }
+
 .material-symbols-outlined{
     position: fixed;
     right:20px;
@@ -417,6 +427,14 @@ padding-left: 35%;
     text-align: center;
     vertical-align: middle;
     margin-left: 3%;
+}
+#ingred {
+    display: flex;
+    justify-content: space-around;
+    /* padding-left: 0%; */
+    padding-right: 40%;
+    padding-top: 20px;
+   
 }
 
 

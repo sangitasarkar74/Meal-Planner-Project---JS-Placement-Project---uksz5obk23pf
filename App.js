@@ -137,7 +137,7 @@ function getRecipeDetails(id) {
     console.log(data);
     data.map((result) => {
       console.log(result.steps);
-      let stepsData = "<h3>Steps</h3>";
+      let stepsData = "<h2>Steps</h2>";
       result.steps.map((step) => {
         console.log(step);
         stepsData += `  
@@ -158,7 +158,7 @@ function getRecipeDetails(id) {
           const ol = document.getElementById("equipments");
           document.getElementById(
             "equipments"
-          ).innerHTML = `<h3>Equipments</h3>`;
+          ).innerHTML = `<h2>Equipments</h2>`;
           const li = document.createElement("li");
           li.innerHTML = equipdata;
           ol.append(li);
@@ -175,7 +175,7 @@ function getRecipeDetails(id) {
           const ul = document.getElementById("ingredients");
           document.getElementById(
             "ingredients"
-          ).innerHTML = `<h3>Ingredients</h3>`;
+          ).innerHTML = `<h2>Ingredients</h2>`;
 
           const li = document.createElement("li");
           li.innerHTML = idData;
